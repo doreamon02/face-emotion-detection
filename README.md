@@ -1,67 +1,39 @@
 # Face Emotion Detection
 
-A Deep Learning and Computer Vision project that detects human emotions from facial expressions in real time. The system uses Convolutional Neural Networks (CNN) and OpenCV to classify emotions such as Happy, Sad, Angry, Fear, Surprise, Neutral, and Disgust.
+A Deep Learning and Computer Vision project that detects human emotions from facial expressions in real time. The system leverages DeepFace and OpenCV to analyze facial expressions and classify emotions such as Happy, Sad, Angry, Fear, Surprise, Neutral, and Disgust.
 
 ## Overview
 
-This project leverages TensorFlow/Keras and OpenCV to build a real-time emotion recognition system capable of analyzing images and webcam streams. The model predicts facial emotions with high accuracy and demonstrates the application of Deep Learning in Computer Vision.
+This project uses DeepFace for emotion analysis and facial recognition capabilities. It supports real-time emotion detection and maintains a facial database for identifying known individuals.
 
 ## Features
 
 * Real-time face and emotion detection
-* Image and webcam-based emotion recognition
-* Classification of multiple emotion categories
-* Face detection using OpenCV
-* Deep learning-based emotion prediction
-* Scalable and easy-to-use implementation
+* Emotion classification from images and webcam streams
+* Face database creation and management
+* Recognition of known individuals
+* Integration with DeepFace and OpenCV
+* Accurate emotion prediction
 
 ## Technologies Used
 
 * Python
+* DeepFace
 * TensorFlow
-* Keras
 * OpenCV
 * NumPy
-* Matplotlib
+* Pandas
 
-## Project Workflow
-
-1. Data preprocessing and augmentation
-2. Face detection using OpenCV
-3. Training a CNN model for emotion classification
-4. Model evaluation and optimization
-5. Real-time emotion prediction
-
-## Supported Emotions
-
-* Happy
-* Sad
-* Angry
-* Fear
-* Surprise
-* Neutral
-* Disgust
-
-## Applications
-
-* Human-Computer Interaction
-* Mental Health Monitoring
-* Smart Surveillance Systems
-* Customer Sentiment Analysis
-* Interactive AI Systems
-
-## Repository Structure
+## Project Structure
 
 ```text
 Face-Emotion-Detection/
 │
-├── dataset/
-├── models/
-├── src/
-├── notebooks/
-├── train.py
-├── predict.py
-├── requirements.txt
+├── app_emotion.py              # Main application for emotion detection
+├── create_deepface_db.py       # Creates and manages the DeepFace database
+├── emotion_detection_db.py     # Emotion detection with database integration
+├── test_deepface.py            # Script for testing DeepFace functionality
+├── requirements.txt            # Project dependencies
 └── README.md
 ```
 
@@ -75,20 +47,41 @@ pip install -r requirements.txt
 
 ## Usage
 
+Run the main application:
+
 ```bash
-python predict.py
+python app_emotion.py
 ```
 
-## Future Enhancements
+Create the face database:
 
-* Support for multiple face detection
-* Improve accuracy using advanced CNN architectures
-* Deploy the model using Streamlit or Flask
-* Integrate with web and mobile applications
+```bash
+python create_deepface_db.py
+```
+
+Run emotion detection with database support:
+
+```bash
+python emotion_detection_db.py
+```
+
+Test DeepFace functionality:
+
+```bash
+python test_deepface.py
+```
+
+## Applications
+
+* Human-Computer Interaction
+* Smart Surveillance Systems
+* Emotion-Aware AI Systems
+* Customer Sentiment Analysis
+* Personalized User Experiences
 
 ## Author
 
-Mohammad Armaan
+**Mohammad Armaan**
 
 GitHub: https://github.com/doreamon02
 
@@ -96,5 +89,5 @@ LinkedIn: https://www.linkedin.com/in/armaan-fulara-80333b1b6
 
 ## License
 
-This project is open source and available under the MIT License.
+This project is licensed under the MIT License.
 
