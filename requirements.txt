@@ -1,0 +1,3 @@
+pip install --upgrade pip
+pip install tensorflow==2.12.0   # required by DeepFace; large but stable on CPU
+pip install deepface opencv-python numpy pandas scikit-learn
